@@ -1,0 +1,30 @@
+{
+  "description": "Redirect new reddit links to old reddit.",
+  "manifest_version": 2,
+  "name": "snoot",
+  "version": "1.0",
+
+  "icons": {
+    "48": "icons/snoot-48.png",
+    "96": "icons/snoot-96.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/snoot-48.png",
+      "96": "icons/snoot-96.png"
+    },
+    "default_title": "we did it reddit"
+  },
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://www.reddit.com/",
+    "https://new.reddit.com/"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
