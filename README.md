@@ -1,8 +1,9 @@
-# snoot ![alt text](https://github.com/ranguli/snoot/raw/master/icons/snoot-light.svg "snoot")
+# snoot ![snoot](https://github.com/ranguli/snoot/raw/master/icons/snoot-light.svg)
 ###### (i hate reddit)
 
 a firefox extension that redirects new reddit links to old reddit links
 
+![screenshot](https://github.com/ranguli/snoot/raw/master/screenshot.png)
 
 ## Usage
 
@@ -11,17 +12,11 @@ a firefox extension that redirects new reddit links to old reddit links
 
 ### Running the plugin for debugging
 
-First clone the repo
-
-```git clone git@github.com:ranguli/snoot```
-
-Install dependencies
-
-```npm install```
-
-Build and run the extension
-
-```web-ext run```
+```
+git clone git@github.com:ranguli/snoot
+npm install
+web-ext run
+```
 
 ### Try it out
 
