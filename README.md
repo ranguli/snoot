@@ -2,14 +2,20 @@
 ###### (i hate reddit)
 
 a firefox extension that redirects new reddit links to old reddit links
- 
+
 
 ## Usage
 
+
+## Development
+
 ### Clone the repo
 ```git clone git@github.com:ranguli/snoot```
+```npm install```
 
-### Install the browser plugin for debugging
+### Running the plugin for debugging
+
+
 
 Type `about:debugging#addons` into Firefox and click `Load Temporary Add-on`, then select the `manifest.json` file in the root directory of the repo.
 
@@ -18,5 +24,5 @@ Type `about:debugging#addons` into Firefox and click `Load Temporary Add-on`, th
 Try opening a reddit link. May I suggest [this](https://reddit.com/r/IASIP/top/?sort=top&t=all). If it doesn't correctly redirect you to old reddit, once of us messed up.
 
 ## To-do:
-- Release builds for self-install 
+- Release builds for self-install
 - Submit to https://addons.mozilla.org/

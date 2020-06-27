@@ -3,18 +3,29 @@
   "manifest_version": 2,
   "name": "snoot",
   "version": "1.0",
-
+  "homepage_url": "https://github.com/ranguli/snoot",
   "icons": {
-    "48": "icons/snoot-48.png",
-    "96": "icons/snoot-96.png"
+    "48": "icons/snoot-48-light.png",
+    "96": "icons/snoot-96-light.png"
   },
 
   "browser_action": {
+    "browser_style": true,
+    "theme_icons": [{
+      "light": "icons/snoot-48-dark.png",
+      "dark": "icons/snoot-48-light.png",
+      "size": 48
+    }, {
+      "light": "icons/snoot-96-dark.png",
+      "dark": "icons/snoot-96-light.png",
+      "size": 96
+    }],
     "default_icon": {
-      "48": "icons/snoot-48.png",
-      "96": "icons/snoot-96.png"
+      "48": "icons/snoot-48-light.png",
+      "96": "icons/snoot-96-light.png"
     },
-    "default_title": "we did it reddit"
+    "default_title": "we did it reddit",
+    "default_popup": "popup/snoot.html"
   },
 
   "permissions": [

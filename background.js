@@ -10,12 +10,10 @@ function onIconClick() {
 }
 
 function redirect(requestDetails) {
-  const parser = document.createElement('a');
-  parser.href = requestDetails.url;
-  const newUrl = `${parser.protocol}//old.reddit.com${parser.pathname}${parser.search}${parser.hash}`;
+  const url = new URL(requestDetails.url)
 
   return {
-    redirectUrl: newUrl,
+    redirectUrl: `${url.protocol}//old.reddit.com${url.pathname}${url.search}${url.hash}`
   };
 }
 
