@@ -1,23 +1,22 @@
-# snoot ![alt text](https://github.com/ranguli/snoot/raw/master/icons/snoot-96.png "snoot")
+# snoot ![snoot](https://github.com/ranguli/snoot/raw/master/icons/snoot-light.svg)
 ###### (i hate reddit)
 
 a firefox extension that redirects new reddit links to old reddit links
 
+![screenshot](https://github.com/ranguli/snoot/raw/master/screenshot.png)
 
 ## Usage
 
 
 ## Development
 
-### Clone the repo
-```git clone git@github.com:ranguli/snoot```
-```npm install```
-
 ### Running the plugin for debugging
 
-
-
-Type `about:debugging#addons` into Firefox and click `Load Temporary Add-on`, then select the `manifest.json` file in the root directory of the repo.
+```
+git clone git@github.com:ranguli/snoot
+npm install
+web-ext run
+```
 
 ### Try it out
 
@@ -26,3 +25,5 @@ Try opening a reddit link. May I suggest [this](https://reddit.com/r/IASIP/top/?
 ## To-do:
 - Release builds for self-install
 - Submit to https://addons.mozilla.org/
+- Dark mode theme with toggle option
+- Extension enable/disable button
