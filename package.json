@@ -2,7 +2,7 @@
   "name": "snoot",
   "version": "1.0.0",
   "description": "a firefox extension that redirects new reddit links to old reddit links",
-  "main": "background.min.js",
+  "main": "background.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,12 +16,8 @@
     "url": "https://github.com/ranguli/snoot/issues"
   },
   "homepage": "https://github.com/ranguli/snoot#readme",
-  "dependencies": {
-    "photon-colors": "^3.3.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "eslint": "^7.3.1",
-    "mocha": "^8.0.1",
     "web-ext": "^4.3.0"
   }
 }
