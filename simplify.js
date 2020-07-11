@@ -26,6 +26,14 @@ function unclutter() {
     '.help-toggle',
     '.reddiquette',
     '.panestack-title',
+    '.linkflairlabel',
+    '.oc-tag',
+    '.subreddit-subscribe',
+    '.awardings-bar',
+    '.author',
+    '.score',
+    '.score-hidden',
+    '.userattrs'
   ];
 
   clutter.forEach((item) => {
@@ -36,7 +44,7 @@ function unclutter() {
 }
 
 function cleanHeaderBottomLeft() {
-  const uselessTabs = ['controversial', 'rising', 'gilded'];
+  const uselessTabs = ['controversial', 'new', 'rising', 'gilded'];
   const headerBottomLeft = document.getElementById('header-bottom-left');
   const tabMenu = headerBottomLeft.querySelector('.tabmenu');
 
@@ -49,12 +57,26 @@ function cleanHeaderBottomLeft() {
   });
 }
 
+function cleanPostDetails() {
+    document.querySelectorAll(".top-matter").forEach((topMatter) => {
+        // Don't care who submitted the post
+        topMatter.querySelectorAll(".tagline").forEach((tagline) => {
+            tagline.innerHTML = tagline.innerHTML.replace("submitted", "").replace("by", "")
+        });
+
+        // Don't care about the number of comments
+        topMatter.querySelectorAll(".bylink.comments.may-blank").forEach((commentsButton) => {
+            commentsButton.textContent = commentsButton.innerHTML.replace(/^[0-9]+/, "")
+        });
+    });
+}
+
 function cleanHeaderBottomRight() {
   const headerBottomRight = document.getElementById('header-bottom-right');
-  const chatSeparator = document.getElementById('header-bottom-right').querySelectorAll('.separator')[1];
+  const chatSeparator = document.querySelector('.separator:nth-child(4)')
   const chat = headerBottomRight.querySelector('#chat');
 
-  if (chat !== null) {
+  if (chat !== null && chatSeparator !== null) {
     chat.remove();
     chatSeparator.remove();
   }
@@ -64,6 +86,7 @@ function simplify() {
   unclutter();
   cleanHeaderBottomRight();
   cleanHeaderBottomLeft();
+  cleanPostDetails();
 }
 
 simplify();
