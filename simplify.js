@@ -36,7 +36,7 @@ function unclutter() {
     '.userattrs',
     '.menuarea',
     '.thumbnail',
-    '.expando-button'
+    '.expando-button',
   ];
 
   clutter.forEach((item) => {
@@ -61,22 +61,22 @@ function cleanHeaderBottomLeft() {
 }
 
 function cleanPostDetails() {
-    document.querySelectorAll(".top-matter").forEach((topMatter) => {
-        // Don't care who submitted the post
-        topMatter.querySelectorAll(".tagline").forEach((tagline) => {
-            tagline.textContent = tagline.textContent.replace("submitted", "").replace("by", "").replace("*", "")
-        });
-
-        // Don't care about the number of comments
-        topMatter.querySelectorAll(".bylink.comments.may-blank").forEach((commentsButton) => {
-            commentsButton.textContent = commentsButton.textContent.replace(/^[0-9]+/, "")
-        });
+  document.querySelectorAll('.top-matter').forEach((topMatter) => {
+    // Don't care who submitted the post
+    topMatter.querySelectorAll('.tagline').forEach((tagline) => {
+      tagline.textContent = tagline.textContent.replace('submitted', '').replace('by', '').replace('*', '');
     });
+
+    // Don't care about the number of comments
+    topMatter.querySelectorAll('.bylink.comments.may-blank').forEach((commentsButton) => {
+      commentsButton.textContent = commentsButton.textContent.replace(/^[0-9]+/, '');
+    });
+  });
 }
 
 function cleanHeaderBottomRight() {
   const headerBottomRight = document.getElementById('header-bottom-right');
-  const chatSeparator = document.querySelector('.separator:nth-child(4)')
+  const chatSeparator = document.querySelector('.separator:nth-child(4)');
   const chat = headerBottomRight.querySelector('#chat');
 
   if (chat !== null && chatSeparator !== null) {

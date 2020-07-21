@@ -1,10 +1,14 @@
 {
   "name": "snoot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "a firefox extension that redirects new reddit links to old reddit links",
   "main": "background.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild:scan": "auditjs ossi --dev",
+    "prebuild:eslint": "eslint --fix *.js",
+    "build": "web-ext build --overwrite-dest --filename snoot-latest.zip",
+    "postbuild": "addons-linter ./web-ext-artifacts/snoot-latest.zip",
+    "start": "web-ext run"
   },
   "repository": {
     "type": "git",
@@ -18,9 +22,11 @@
   "homepage": "https://github.com/ranguli/snoot#readme",
   "dependencies": {},
   "devDependencies": {
+    "auditjs": "^4.0.18",
     "eslint": "^7.5.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-security": "^1.4.0",
     "web-ext": "^4.3.0"
   }
 }
