@@ -34,7 +34,9 @@ function unclutter() {
     '.score',
     '.score-hidden',
     '.userattrs',
-    '.menuarea'
+    '.menuarea',
+    '.thumbnail',
+    '.expando-button'
   ];
 
   clutter.forEach((item) => {
