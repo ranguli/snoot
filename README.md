@@ -39,3 +39,4 @@ Try opening a reddit link. May I suggest [this](https://reddit.com/r/IASIP/top/?
 - [x] Submit to https://addons.mozilla.org/
 - [ ] Dark mode theme with toggle option
 - [ ] Extension enable/disable button
+- [ ] Move to storing data in IndexedDB instead of in code https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files
