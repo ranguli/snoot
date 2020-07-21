@@ -33,7 +33,8 @@ function unclutter() {
     '.author',
     '.score',
     '.score-hidden',
-    '.userattrs'
+    '.userattrs',
+    '.menuarea'
   ];
 
   clutter.forEach((item) => {
