@@ -64,12 +64,12 @@ function cleanPostDetails() {
     document.querySelectorAll(".top-matter").forEach((topMatter) => {
         // Don't care who submitted the post
         topMatter.querySelectorAll(".tagline").forEach((tagline) => {
-            tagline.innerHTML = tagline.innerHTML.replace("submitted", "").replace("by", "")
+            tagline.textContent = tagline.textContent.replace("submitted", "").replace("by", "").replace("*", "")
         });
 
         // Don't care about the number of comments
         topMatter.querySelectorAll(".bylink.comments.may-blank").forEach((commentsButton) => {
-            commentsButton.textContent = commentsButton.innerHTML.replace(/^[0-9]+/, "")
+            commentsButton.textContent = commentsButton.textContent.replace(/^[0-9]+/, "")
         });
     });
 }
